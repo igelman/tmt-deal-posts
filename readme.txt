@@ -26,3 +26,9 @@ In brief:
 2. Create database wordpress-tests.
 3. Copy sample config and edit db settings in unittests-config.php.
 4. Edit $path in ./tests/boostrap.php
+
+== References ==
+http://justintadlock.com/archives/2010/04/29/custom-post-types-in-wordpress
+Cheatsheet https://gist.github.com/justintadlock/6552000
+register_post_type( $post_type, $args ) http://codex.wordpress.org/Function_Reference/register_post_type
+get_post_types( $args, $output, $operator ) http://codex.wordpress.org/Function_Reference/get_post_types
