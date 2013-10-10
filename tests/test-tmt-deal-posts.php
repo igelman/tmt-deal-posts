@@ -27,8 +27,7 @@ class TestTmtDealPosts extends WP_UnitTestCase {
     }
     
     public function testPostTypeInAdminMenu() {
-	    $html = $this->go_to("http://localhost/development/wordpress/wp-admin/");
-	    echo $html;
+    	return;
 	    //$this->assertTag($matcher, $html);
 
     }

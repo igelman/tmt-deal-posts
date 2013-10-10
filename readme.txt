@@ -30,5 +30,10 @@ In brief:
 == References ==
 http://justintadlock.com/archives/2010/04/29/custom-post-types-in-wordpress
 Cheatsheet https://gist.github.com/justintadlock/6552000
+
+WordPress Code
 register_post_type( $post_type, $args ) http://codex.wordpress.org/Function_Reference/register_post_type
 get_post_types( $args, $output, $operator ) http://codex.wordpress.org/Function_Reference/get_post_types
+
+PHPUnit
+http://www.maxcutler.com/2012/06/30/wordpress-unit-tests-sprint-a-primer/
