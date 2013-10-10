@@ -4,10 +4,16 @@
 class TmtDealPosts {
 
 	private function definePostTypeArgs() {
+		require_once 'tmt-deal-posts-settings-class.php';
+		$this->tmtDealPostsSettings = new TmtDealPostsSettings();
+        $this->tmtDealPostsSettings->createSettings();
+        return $this->tmtDealPostsSettings->getSettings();
+/*
 		return array(
 			'public' => true,
 			'label'  => 'Deals'
 		);
+*/
 	}
 	
 	function registerPostType() {
@@ -20,4 +26,5 @@ class TmtDealPosts {
 		add_action( 'init', array( $this, 'registerPostType' ) );
 	}
 }
+
 ?>

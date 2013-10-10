@@ -13,7 +13,10 @@ Version: 0.1
 require_once 'tmt-deal-posts-class.php';
 
 $tmtDealPosts = new TmtDealPosts();
+//$tmtDealPosts->registerPostType();
 $tmtDealPosts->addAction();
+
+
 
 
 ?>

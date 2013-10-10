@@ -9,14 +9,19 @@ class TmtDealPostsSettings {
 	public function createSettings() {
 		$this->settings = array();
 		$this->addLabelsToSettings();
+		$this->addOtherSettings();
+	}
+	
+	private function addOtherSettings() {
+		$this->settings['public']	=	true;
 	}
 	
 	private function addLabelsToSettings() {
 		$this->labels = array(
-			'name'                => __( 'TMT deal posts', 'tmt-deal-posts' ),
-			'singular_name'       => __( 'TMT deal posts', 'tmt-deal-posts' ),
+			'name'                => __( 'TMT Deal Posts', 'tmt-deal-posts' ),
+			'singular_name'       => __( 'TMT Deal Post', 'tmt-deal-posts' ),
 			'add_new'             => __( 'Add new TMT deal post', 'tmt-deal-posts' ),
-			'all_items'           => __( 'TMT deal posts', 'tmt-deal-posts' ),
+			'all_items'           => __( 'TMT Deal Posts', 'tmt-deal-posts' ),
 			'add_new_item'        => __( 'Add new TMT deal post', 'tmt-deal-posts' ),
 			'edit_item'           => __( 'Edit TMT deal post', 'tmt-deal-posts' ),
 			'new_item'            => __( 'New TMT deal post', 'tmt-deal-posts' ),

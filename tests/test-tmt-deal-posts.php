@@ -1,6 +1,7 @@
 <?php
 require_once '/Users/alantest/Developer/src/wordpress-tests/bootstrap.php';
-require_once '/Volumes/Macintosh HD/Library/Server/Web/Data/Sites/Default/development/wordpress/wp-content/plugins/tmt-deal-posts/tmt-deal-posts-class.php';
+//require_once '/Volumes/Macintosh HD/Library/Server/Web/Data/Sites/Default/development/wordpress/wp-content/plugins/OFFtmt-deal-posts/tmt-deal-posts-class.php';
+require_once '../tmt-deal-posts-class.php';
 
 /**
  * TMT Deal Posts Tests
@@ -12,7 +13,7 @@ class TestTmtDealPosts extends WP_UnitTestCase {
     public function setUp() {
         parent::setUp();
         $this->tmtDealPosts = new TmtDealPosts();
-		$this->tmtDealPosts->registerPostType();
+        $this->tmtDealPosts->registerPostType();
 		$this->tmtDealPosts->addAction();
 
     }

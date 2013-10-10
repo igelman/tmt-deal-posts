@@ -20,7 +20,7 @@ class TestTmtDealPosts extends WP_UnitTestCase {
         $this->tmtDealPostsSettings = new TmtDealPostsSettings();
         $this->tmtDealPostsSettings->createSettings();
         $this->tmtDealPosts = new TmtDealPosts();
-		$this->tmtDealPosts->registerPostType();
+		//$this->tmtDealPosts->registerPostType();
 		$this->tmtDealPosts->addAction();
 
     }
