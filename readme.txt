@@ -30,6 +30,7 @@ In brief:
 == References ==
 http://justintadlock.com/archives/2010/04/29/custom-post-types-in-wordpress
 Cheatsheet https://gist.github.com/justintadlock/6552000
+Metabox: http://wp.tutsplus.com/tutorials/plugins/how-to-create-custom-wordpress-writemeta-boxes/
 
 WordPress Code
 register_post_type( $post_type, $args ) http://codex.wordpress.org/Function_Reference/register_post_type
@@ -37,3 +38,21 @@ get_post_types( $args, $output, $operator ) http://codex.wordpress.org/Function_
 
 PHPUnit
 http://www.maxcutler.com/2012/06/30/wordpress-unit-tests-sprint-a-primer/
+
+== Requirements ==
+As end user, I want to read the following content:
+	Title
+	Details
+	Coupon code
+	Deal expiration
+	Image
+	Links
+
+As producer, I want to program the following metacontent:
+	Post available date
+	Post expiration date
+	Main link
+	Merchant
+	Product types (clothing/shoes, clothing/dresses, electronics/laptops, ...)
+	Deal type (coupon, sale, ...)
+	Content types (featured, todays tips, listings, ...)

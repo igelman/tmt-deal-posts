@@ -1,6 +1,9 @@
 <?php
 
 
+/**
+ * TmtDealPostsSettings class.
+ */
 class TmtDealPostsSettings {
 
 	private $settings;
