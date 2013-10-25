@@ -40,5 +40,14 @@ class TestTmtDealPosts extends WP_UnitTestCase {
 	    $labels = $settings['labels'];
 	    $this->assertTrue(is_array($labels), "Tried asserting that \$labels is an array.");
     }
+    
+    public function testDealPostTypeExists() {
+	    // How do I test this?
+    }
+    
+    public function testCustomFieldsExist() {
+	    // How do I test this?
+	    // For now, I'm creating custom fields using a 3rd party plug-in
+    }
 }
 ?>

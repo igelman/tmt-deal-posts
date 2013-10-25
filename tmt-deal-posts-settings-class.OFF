@@ -17,6 +17,15 @@ class TmtDealPostsSettings {
 	
 	private function addOtherSettings() {
 		$this->settings['public']	=	true;
+		$this->settings['supports']	=	array(
+			'title',
+			'editor',
+			'thumbnail',
+			'custom-fields',
+		);
+		$this->settings['taxonomies']	=	array(
+			'category',
+		);
 	}
 	
 	private function addLabelsToSettings() {

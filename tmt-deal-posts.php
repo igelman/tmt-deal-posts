@@ -12,9 +12,14 @@ Version: 0.1
 
 require_once 'tmt-deal-posts-class.php';
 
+
 $tmtDealPosts = new TmtDealPosts();
 //$tmtDealPosts->registerPostType();
 $tmtDealPosts->addAction();
+
+require_once 'tmt-deal-taxonomy-class.php';
+$tmtDealTaxonomy = new TmtDealTaxonomy();
+$tmtDealTaxonomy->addAction();
 
 
 
