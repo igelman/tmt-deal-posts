@@ -9,7 +9,7 @@ License: GPLv2 or later
 Deal Posts enables the custom post type "Deals".
 
 == Description ==
-
+User Stories: https://trello.com/b/XsZ4mXhM/tjd-plugin
 Deal Posts enables the custom post type "Deals".
 
 == Installation ==
