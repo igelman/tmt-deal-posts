@@ -18,8 +18,11 @@ $tmtDealPosts = new TmtDealPosts();
 $tmtDealPosts->addAction();
 
 require_once 'tmt-deal-taxonomy-class.php';
-$tmtDealTaxonomy = new TmtDealTaxonomy();
-$tmtDealTaxonomy->addAction();
+$tmtDealTaxonomyProduct = new TmtDealTaxonomy("Product Types", "Product Type");
+$tmtDealTaxonomyProduct->addAction();
+
+$tmtDealTaxonomyMerchant = new TmtDealTaxonomy("Merchants", "Merchant");
+$tmtDealTaxonomyMerchant->addAction();
 
 
 

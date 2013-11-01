@@ -6,9 +6,17 @@
  */
 class TmtDealTaxonomy {
 
+	private $taxonomy;
+	private $taxonomySingular;
+	
+	public function __construct($taxonomy, $taxonomySingular) {
+		$this->taxonomy = $taxonomy;
+		$this->taxonomySingular = $taxonomySingular;
+	}
+
 	private function initializeSettings() {
-		$taxonomy = "Product Types";
-		$taxonomySingular = "Product Type";
+		$taxonomy = $this->taxonomy;// "Product Types";
+		$taxonomySingular = $this->taxonomySingular; //"Product Type";
 		$taxonomyLc = strtolower($taxonomy);
 		$taxonomyLcSingular = strtolower($taxonomySingular);
 		
@@ -49,15 +57,11 @@ class TmtDealTaxonomy {
 
 	
 	function registerTaxonomy() {
-		$taxonomy = "product_type";
+		$taxonomy = strtolower(str_replace(" ", "_", $this->taxonomySingular));
+// "product_type";
 		$object_type = array('post', 'tmt-deal-posts',);
 		$args = $this->defineTaxonomyArgs();
 		register_taxonomy( $taxonomy, $object_type, $args );
-/*
-		$post_type = "tmt-deal-posts";
-		$args = $this->definePostTypeArgs();
-		register_post_type( $post_type, $args );
-*/
 	}
 	
 	function addAction() {

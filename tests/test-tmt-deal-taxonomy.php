@@ -13,7 +13,7 @@ class TestTmtDealTaxonomy extends WP_UnitTestCase {
 
     public function setUp() {
         parent::setUp();
-        $this->tmtDealTaxonomy = new TmtDealTaxonomy();
+        $this->tmtDealTaxonomy = new TmtDealTaxonomy("Product Types", "Product Type");
         $this->tmtDealTaxonomy->registerTaxonomy();
 		$this->tmtDealTaxonomy->addAction();
 
