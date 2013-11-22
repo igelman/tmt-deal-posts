@@ -59,7 +59,7 @@ class TmtDealTaxonomy {
 	function registerTaxonomy() {
 		$taxonomy = strtolower(str_replace(" ", "_", $this->taxonomySingular));
 // "product_type";
-		$object_type = array('post', 'tmt-deal-posts',);
+		$object_type = array('post', 'tmt-deal-posts', 'tmt-coupon-posts');
 		$args = $this->defineTaxonomyArgs();
 		register_taxonomy( $taxonomy, $object_type, $args );
 	}

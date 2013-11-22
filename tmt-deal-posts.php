@@ -72,7 +72,6 @@ $dealOtherArgsArray = array(
 $tmtDealPosts = new TmtDealPosts();
 $tmtDealPosts->setPostType($dealPostType);
 $tmtDealPosts->setSettings($dealLabelsArray, $dealOtherArgsArray);
-
 //$tmtDealPosts->registerPostType();
 $tmtDealPosts->addAction();
 
