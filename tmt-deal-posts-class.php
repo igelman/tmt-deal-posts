@@ -5,10 +5,12 @@
  * TmtDealPosts class.
  */
 class TmtDealPosts {
+	private $postType;
 	private $labelsArray;
 	private $otherArgsArray;
 
 	private function initializeSettings() {
+/*
 		$this->labelsArray = array(
 			'name'               => __( 'TMT Deal Posts', 'tmt-deal-posts' ),
 			'singular_name'      => __( 'TMT Deal Post', 'tmt-deal-posts' ),
@@ -31,32 +33,31 @@ class TmtDealPosts {
 				'title', 'editor', 'thumbnail', 'custom-fields',
 			),
 			'taxonomies'		=> array('category',),
-		);		
+		);	
+*/	
 	}
-
-
-/*
-	private function OLDdefinePostTypeArgs() {
-		require_once 'tmt-deal-posts-settings-class.php';
-		$this->tmtDealPostsSettings = new TmtDealPostsSettings();
-        $this->tmtDealPostsSettings->createSettings();
-        return $this->tmtDealPostsSettings->getSettings();
-	}
-*/
 
 	private function definePostTypeArgs() {
 		require_once 'tmt-plugin-settings-class.php';	
-		$this->initializeSettings();	
+		//$this->initializeSettings();	
 		$this->tmtDealPostsSettings = new TmtPluginSettings($this->labelsArray, $this->otherArgsArray);
         $this->tmtDealPostsSettings->createSettings();
         return $this->tmtDealPostsSettings->getSettings();
 	}
 
+	public function setPostType($postType) {
+		$this->postType = $postType;
+	}
 	
-	function registerPostType() {
-		$post_type = "tmt-deal-posts";
+	public function setSettings($labelsArray, $otherArgsArray) {
+		$this->labelsArray = $labelsArray;
+		$this->otherArgsArray = $otherArgsArray;
+	}
+	
+	public function registerPostType() {
+		$postType = $this->postType; // "tmt-deal-posts";
 		$args = $this->definePostTypeArgs();
-		register_post_type( $post_type, $args );
+		register_post_type( $postType, $args );
 	}
 	
 	function addAction() {

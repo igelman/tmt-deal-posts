@@ -8,11 +8,44 @@ require_once '../tmt-deal-posts-class.php';
  */
 class TestTmtDealPosts extends WP_UnitTestCase {
 
-    public $plugin_slug = 'tmt-deal-posts';
+    public $plugin_slug = "tmt-deal-posts";
+    public $postType = "tmt-deal-posts";
+    public $labelsArray;
+    public $otherArgsArray;
+    
+	
 
     public function setUp() {
         parent::setUp();
+
+	    $this->labelsArray = array(
+			'name'               => __( 'TMT Deal Posts', 'tmt-deal-posts' ),
+			'singular_name'      => __( 'TMT Deal Post', 'tmt-deal-posts' ),
+			'add_new'            => __( 'Add new TMT deal post', 'tmt-deal-posts' ),
+			'all_items'          => __( 'TMT Deal Posts', 'tmt-deal-posts' ),
+			'add_new_item'       => __( 'Add new TMT deal post', 'tmt-deal-posts' ),
+			'edit_item'          => __( 'Edit TMT deal post', 'tmt-deal-posts' ),
+			'new_item'           => __( 'New TMT deal post', 'tmt-deal-posts' ),
+			'view_item'          => __( 'View TMT deal post', 'tmt-deal-posts' ),
+			'search_items'       => __( 'Search TMT deal posts', 'tmt-deal-posts' ),
+			'not_found'          => __( 'No TMT deal posts found', 'tmt-deal-posts' ),
+			'not_found_in_trash' => __( 'No TMT deal posts found in trash', 'tmt-deal-posts' ),
+			'parent_item_colon'  => __( 'Parent TMT deal posts', 'tmt-deal-posts' ),
+			'menu_name'          => __( 'TMT deal posts', 'tmt-deal-posts' ),
+		);
+	
+		$this->otherArgsArray = array(
+			'public'			=> TRUE,
+			'supports'			=> array(
+				'title', 'editor', 'thumbnail', 'custom-fields',
+			),
+			'taxonomies'		=> array('category',),
+		);	
+
+
         $this->tmtDealPosts = new TmtDealPosts();
+        $this->tmtDealPosts->setPostType($this->postType);
+        $this->tmtDealPosts->setSettings($this->labelsArray, $this->otherArgsArray);
         $this->tmtDealPosts->registerPostType();
 		$this->tmtDealPosts->addAction();
 
