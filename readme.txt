@@ -13,11 +13,17 @@ User Stories: https://trello.com/b/XsZ4mXhM/tjd-plugin
 Deal Posts enables the custom post type "Deals".
 
 == Installation ==
-Wordpress <http://wordpress.org/latest.tar.gz>
-
-Clone this repo in wordpress/wp-content/plugins/tmt-deal-post .
+1. Install base Wordpress <http://wordpress.org/latest.tar.gz>.
+2. Clone this repo in wordpress/wp-content/plugins/tmt-deal-post .
+3. Install three other plug-ins and the theme.
+4. Import the advanced-custom-field-export.xml
+  4a. Navigate to Tools » Import and select WordPress
+  4b. Install WP import plugin if prompted
+  4c. Upload and import your exported .xml file
+  4d. Select your user and ignore Import Attachments
 
 Plug-ins:
+	TMT Sample Content <https://github.com/igelman/tmt-sample-content>
 	advanced-custom-fields <http://www.advancedcustomfields.com/>
 	acf flexible content field <http://download.advancedcustomfields.com/FC9O-H6VN-E4CL-LT33/trunk/>
 Theme:
