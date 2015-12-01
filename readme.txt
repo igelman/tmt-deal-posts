@@ -25,7 +25,7 @@ Deal Posts enables the custom post type "Deals".
 Plug-ins:
 	TMT Sample Content <https://github.com/igelman/tmt-sample-content>
 	advanced-custom-fields <http://www.advancedcustomfields.com/>
-	acf flexible content field <http://download.advancedcustomfields.com/FC9O-H6VN-E4CL-LT33/trunk/>
+	acf flexible content field <http://download.advancedcustomfields.com/NUMBER/trunk/>
 Theme:
 	tjd-theme <https://github.com/igelman/tjd-theme.git>
 
